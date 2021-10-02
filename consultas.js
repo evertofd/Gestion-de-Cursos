@@ -2,11 +2,11 @@ const { Pool } = require("pg");
 require('dotenv').config({path: '.env'})
 const pool = new Pool({
   user: process.env.BD_USER,
-  host: process.env.HOST,
-  password:process.env.BD_PASS ,
+  host: process.env.BD_HOST,
+  password: process.env.BD_PASS,
   database: process.env.BD_NOMBRE,
   port: process.env.BD_PORT,
-  ssl:{
+  ssl: {
     rejectUnauthorized: false
   }
 });
